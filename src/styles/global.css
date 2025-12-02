@@ -1,9 +1,11 @@
 @import 'tailwindcss';
+/* Heading display */
 
 @theme {
   /* Colors */
-  --color-text-1: oklch(0 0 0 / 30%);
-  --color-text-2: oklch(0 0 0 / 10%);
+  --color-typo-1: oklch(0 0 0 / 30%);
+  --color-typo-2: oklch(0 0 0 / 10%);
+  --color-typo-3: oklch(0.2801 0.008 59.34);
 
   --color-accent-1: oklch(0.4299 0.1692 259.55);
   --color-accent-2: oklch(0.4973 0.0687 145.11);
@@ -17,31 +19,34 @@
   --font-family-base: 'Figtree', system-ui, -apple-system, sans-serif;
   --font-family-heading: 'Caprasimo', system-ui, -apple-system, sans-serif;
 
-  /* Spacing */
-  --spacing-0: 0;
-  --spacing-1: 0.25rem;    /* 4px */
-  --spacing-2: 0.5rem;     /* 8px */
-  --spacing-3: 0.75rem;    /* 12px */
-  --spacing-4: 1rem;       /* 16px */
-  --spacing-5: 1.25rem;    /* 20px */
-  --spacing-6: 1.5rem;     /* 24px */
-  --spacing-8: 2rem;       /* 32px */
-  --spacing-10: 2.5rem;    /* 40px */
-  --spacing-12: 3rem;      /* 48px */
-  --spacing-16: 4rem;      /* 64px */
-  --spacing-20: 5rem;      /* 80px */
-  --spacing-24: 6rem;      /* 96px */
-  --spacing-32: 8rem;      /* 128px */
+  /* Font sizes */
+  --text-size-xs: 0.75rem; /* 12px */
+  --text-size-sm: 0.875rem; /* 14px */
+  --text-size-base: 1rem; /* 16px */
+  --text-size-lg: 1.125rem; /* 18px */
+  --text-size-xl: 1.25rem; /* 20px */
+  --text-size-2xl: 1.5rem; /* 24px */
+  --text-size-3xl: 1.875rem; /* 30px */
+  --text-size-4xl: 2.25rem; /* 36px */
+  --text-size-5xl: 3rem; /* 48px */
+  --text-size-6xl: 3.75rem; /* 60px */
+  --text-size-7xl: 4.5rem; /* 72px */
+  --text-size-8xl: 6rem; /* 96px */
+  --text-size-9xl: 8rem; /* 128px */
+  --text-size-10xl: 9rem; /* 144px */
+  --text-size-11xl: 10rem; /* 160px */
+  --text-size-12xl: 11rem; /* 176px */
+  --text-size-13xl: 12rem; /* 192px */
 
   /* Border Radius */
   --radius-none: 0;
-  --radius-sm: 0.125rem;   /* 2px */
-  --radius-base: 0.25rem;  /* 4px */
-  --radius-md: 0.375rem;   /* 6px */
-  --radius-lg: 0.5rem;     /* 8px */
-  --radius-xl: 0.75rem;    /* 12px */
-  --radius-2xl: 1rem;      /* 16px */
-  --radius-3xl: 1.5rem;    /* 24px */
+  --radius-sm: 0.125rem; /* 2px */
+  --radius-base: 0.25rem; /* 4px */
+  --radius-md: 0.375rem; /* 6px */
+  --radius-lg: 0.5rem; /* 8px */
+  --radius-xl: 0.75rem; /* 12px */
+  --radius-2xl: 1rem; /* 16px */
+  --radius-3xl: 1.5rem; /* 24px */
   --radius-full: 9999px;
 
   /* Shadows */
@@ -66,6 +71,12 @@
   --z-overlay: 300;
   --z-modal: 400;
   --z-toast: 500;
+
+  /* Responsive breakpoints */
+  --breakpoint-sm: 320px;
+  --breakpoint-md: 800px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
 }
 
 /* Base styles */

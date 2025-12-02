@@ -1,0 +1,43 @@
+---
+import bannerFull from '../../../assets/images/banner-full.jpg';
+import bannerTablet from '../../../assets/images/banner-tablet.jpg';
+import bannerMobile from '../../../assets/images/banner-mobile.jpg';
+---
+
+<!-- Preload critical banner image -->
+<link rel="preload" as="image" href={bannerMobile.src} fetchpriority="high" />
+
+<section 
+  class="min-h-screen flex items-center justify-center flex-col"
+  aria-labelledby="banner-title"
+  role="banner"
+>
+  <h1 
+    id="banner-title"
+    class="text-typo-3 xl:text-size-13xl md:text-size-8xl text-size-7xl tracking-tight"
+  >
+    Our Blooms<sup class="font-thin" aria-label="registered trademark">®</sup>
+  </h1>
+  <picture>
+    <source
+      srcset={bannerFull.src}
+      media="(min-width: 1280px)"
+      type="image/jpeg"
+    />
+    <source
+      srcset={bannerTablet.src}
+      media="(min-width: 800px)"
+      type="image/jpeg"
+    />
+    <img
+      src={bannerMobile.src}
+      alt="Elegant bouquet of fresh flowers arranged in a vase"
+      width={bannerMobile.width}
+      height={bannerMobile.height}
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="w-full h-auto"
+    />
+  </picture>
+</section>
