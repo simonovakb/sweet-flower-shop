@@ -64,19 +64,17 @@
   --transition-base: 300ms ease-in-out;
   --transition-slow: 500ms ease-in-out;
 
-  /* Z-index layers */
-  --z-base: 0;
-  --z-dropdown: 100;
-  --z-sticky: 200;
-  --z-overlay: 300;
-  --z-modal: 400;
-  --z-toast: 500;
-
   /* Responsive breakpoints */
   --breakpoint-sm: 320px;
   --breakpoint-md: 800px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
+
+  /* container max-widths */
+  --container-sm: 320px;
+  --container-md: 720px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
 }
 
 /* Base styles */
