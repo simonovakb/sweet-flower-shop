@@ -6,12 +6,14 @@
   --color-typo-1: oklch(0 0 0 / 30%);
   --color-typo-2: oklch(0 0 0 / 10%);
   --color-typo-3: oklch(0.2801 0.008 59.34);
-
+  --color-caption: oklch(0.4568 0 0);
+  --color-headline: oklch(0.2009 0.0025 67.68);
+  --color-divider: oklch(0.464 0 0);
   --color-accent-1: oklch(0.4299 0.1692 259.55);
   --color-accent-2: oklch(0.4973 0.0687 145.11);
   --color-accent-3: oklch(0.6495 0.1464 51.63);
   --color-accent-4: oklch(0.457 0.1742 312.23);
-  --color-accent-5: oklch(0.8575 0.1752 88.49);
+  --color-accent-5: oklch(0.8575 0.1752 80.49);
   --color-accent-6: oklch(0 0 0);
   --color-accent-7: oklch(1 0 0);
 
@@ -96,9 +98,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-heading);
   line-height: var(--line-height-tight);
-  font-weight: 600;
 }
 
 /* Media */
