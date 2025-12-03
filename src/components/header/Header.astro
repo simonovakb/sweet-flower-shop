@@ -17,9 +17,9 @@
     </div>
 
     <el-popover-group class="hidden lg:flex lg:gap-x-12">
-      <a href="#" class="text-sm/6 font-semibold text-gray-900 uppercase hover:text-accent-1 hover:underline">Gallery</a>
-      <a href="#" class="text-sm/6 font-semibold text-gray-900 uppercase hover:text-accent-1 hover:underline">About</a>
-      <a href="#" class="text-sm/6 font-semibold text-gray-900 uppercase hover:text-accent-1 hover:underline">Contact</a>
+      <a href="#gallery" class="text-sm/6 font-semibold text-gray-900 uppercase hover:text-accent-1 hover:underline">Gallery</a>
+      <a href="#about" class="text-sm/6 font-semibold text-gray-900 uppercase hover:text-accent-1 hover:underline">About</a>
+      <a href="#contact" class="text-sm/6 font-semibold text-gray-900 uppercase hover:text-accent-1 hover:underline">Contact</a>
     </el-popover-group>
 
   </nav>
@@ -35,9 +35,9 @@
           </button>
         </div>
 
-        <a href="#" class="block rounded-lg px-3 py-2 text-sm/6 font-semibold text-accent-6 uppercase hover:text-accent-1 hover:underline">Gallery</a>
-        <a href="#" class="block rounded-lg px-3 py-2 text-sm/6 font-semibold text-accent-6 uppercase hover:text-accent-1 hover:underline">About</a>
-        <a href="#" class="block rounded-lg px-3 py-2 text-sm/6 font-semibold text-accent-6 uppercase hover:text-accent-1 hover:underline">Contact</a>
+        <a href="#gallery" class="block rounded-lg px-3 py-2 text-sm/6 font-semibold text-accent-6 uppercase hover:text-accent-1 hover:underline">Gallery</a>
+        <a href="#about" class="block rounded-lg px-3 py-2 text-sm/6 font-semibold text-accent-6 uppercase hover:text-accent-1 hover:underline">About</a>
+        <a href="#contact" class="block rounded-lg px-3 py-2 text-sm/6 font-semibold text-accent-6 uppercase hover:text-accent-1 hover:underline">Contact</a>
       </el-dialog-panel>
     </dialog>
    </el-dialog>
@@ -48,7 +48,6 @@
   // Define scroll threshold
   const SCROLL_THRESHOLD = 0;
   
-  // Define class names for toggling
   const CLASSES = {
     HEADER_SHADOW: 'shadow-md',
     NAV_PADDING_LARGE: 'p-6',
@@ -57,11 +56,9 @@
 
   // Initialize sticky header behavior
   function initStickyHeader(): void {
-    // Get header and nav elements
     const header = document.getElementById('header');
     const nav = document.getElementById('nav');
     
-    // Guard clause
     if (!header || !nav) return;
 
     // Update header styles based on scroll position
