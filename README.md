@@ -1,46 +1,95 @@
-# Astro Starter Kit: Basics
+# Sweet Flower Shop
 
-```sh
-npm create astro@latest -- --template basics
-```
+A modern, responsive flower shop website built with Astro and Tailwind CSS.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-## 🚀 Project Structure
+- Modern and elegant design
+- Fully responsive (mobile, tablet, desktop)
+- Fast and optimized with Astro
+- SEO-friendly and accessible
+- Optimized images with responsive breakpoints
+- Smooth animations and transitions
 
-Inside of your Astro project, you'll see the following folders and files:
+## Project Structure
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+├── src/
+│   ├── assets/
+│   │   └── images/         # Responsive banner images
+│   ├── components/
+│   │   ├── header/         # Header with sticky navigation
+│   │   ├── footer/
+│   │   ├── sections/       # Page sections
+│   │   │   ├── banner-section/
+│   │   │   ├── about-section/
+│   │   │   ├── services-section/
+│   │   │   └── contact-section/
+│   │   └── common/         # Reusable components
+│   │       └── carousel/
+│   ├── layouts/
+│   │   └── Layout.astro    # Main layout
+│   ├── pages/
+│   │   └── index.astro     # Home page
+│   └── styles/
+│       └── global.css      # Global styles and CSS variables
+├── astro.config.mjs
+├── biome.json
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Tech Stack
 
-## 🧞 Commands
+- **Framework**: [Astro](https://astro.build) v5.16.3
+- **Styling**: [Tailwind CSS](https://tailwindcss.com) v4.1.17
+- **Linting**: [Biome](https://biomejs.dev)
+- **Formatting**: [Prettier](https://prettier.io) with Astro plugin
 
-All commands are run from the root of the project, from a terminal:
+## Commands
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+All commands are run from the root of the project:
 
-## 👀 Want to learn more?
+| Command            | Action                                     |
+| :----------------- | :----------------------------------------- |
+| `npm install`      | Install dependencies                       |
+| `npm run dev`      | Start local dev server at `localhost:4321` |
+| `npm run build`    | Build production site to `./dist/`         |
+| `npm run preview`  | Preview build locally before deploying     |
+| `npm run lint`     | Check code with Biome                      |
+| `npm run lint:fix` | Fix code issues with Biome                 |
+| `npm run format`   | Format code with Prettier                  |
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Design System
+
+The project uses a comprehensive design system with:
+
+- **Color Palette**: Custom accent colors and typography colors
+- **Typography**: Figtree (body) and Caprasimo (headings)
+- **Responsive Breakpoints**: 320px (mobile), 800px (tablet), 1024px (desktop), 1280px (xl)
+- **CSS Variables**: Defined in `src/styles/global.css`
+
+## Responsive Design
+
+The site is optimized for three main breakpoints:
+
+- **Mobile**: 320px - 799px
+- **Tablet**: 800px - 1023px
+- **Desktop**: 1024px+
+
+## License
+
+This project is part of a portfolio.
+
+## Author
+
+**Ekaterina Simonova**
+
+- GitHub: [@simonovakb](https://github.com/simonovakb)
+- Linkedin [simonovakb](https://www.linkedin.com/in/simonovakb/)
+
+## Acknowledgments
+
+- Built with [Astro](https://astro.build)
+- Styled with [Tailwind CSS](https://tailwindcss.com)
