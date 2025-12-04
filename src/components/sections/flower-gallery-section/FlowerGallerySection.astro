@@ -1,0 +1,30 @@
+---
+import Carousel from "../../common/carousel/Carousel.astro";
+import flower1 from "../../../assets/images/flowers/flower-1.jpg";
+import flower2 from "../../../assets/images/flowers/flower-2.jpg";
+import flower3 from "../../../assets/images/flowers/flower-3.jpg";
+import flower4 from "../../../assets/images/flowers/flower-4.jpg";
+
+const data = [
+  {
+    image: flower1.src,
+    alt: 'Red Roses Bouquet',
+  },
+  {
+    image: flower2.src,
+    alt: 'Sunflower Arrangement',
+  },
+  {
+    image: flower3.src,
+    alt: 'Mixed Spring Flowers',
+  },
+  {
+    image: flower4.src,
+    alt: 'Elegant White Lilies',
+  },
+];
+---
+
+<section aria-labelledby="flower-gallery-heading" id="flower-gallery">
+  <Carousel data={data}/>
+</section>

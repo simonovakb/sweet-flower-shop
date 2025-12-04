@@ -1,0 +1,69 @@
+---
+import Card from "../cards/Card.astro";
+
+
+const { data } = Astro.props;
+
+type DataItem = {
+  image: string;
+  alt: string;
+};
+
+---
+
+<div class="swiper-container">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {data.map((item: DataItem) => (
+        <div class="swiper-slide">
+          <Card image={item.image} alt={item.alt} width={300} height={300} />
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .swiper-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .swiper {
+      height: 300px;
+    }
+  }
+</style>
+
+<script>
+  import Swiper from 'swiper';
+  import { Autoplay } from 'swiper/modules';
+
+  new Swiper('.swiper', {
+    modules: [ Autoplay],
+    slidesPerView: 5,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
