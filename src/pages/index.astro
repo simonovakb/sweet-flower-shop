@@ -2,16 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/header/Header.astro';
 import Banner from '../components/sections/banner-section/Banner.astro';
-import bannerMobile from '../assets/images/banner-mobile.jpg';
 import AboutSection from '../components/sections/about-section/AboutSection.astro';
+import FlowerGallerySection from '../components/sections/flower-gallery-section/FlowerGallerySection.astro';
 
+import bannerMobile from '../assets/images/banners/banner-mobile.jpg';
+
+import 'swiper/css';
 import '../styles/global.css';
 ---
 
 <Layout>
   <!-- Preload critical banner image -->
   <link slot="head" rel="preload" as="image" href={bannerMobile.src} fetchpriority="high" />
+
   <Header />
   <Banner />
   <AboutSection />
+  <FlowerGallerySection />
 </Layout>
