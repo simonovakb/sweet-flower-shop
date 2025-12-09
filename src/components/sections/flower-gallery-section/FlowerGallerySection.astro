@@ -1,0 +1,52 @@
+---
+import Carousel from '../../common/carousel/Carousel.astro';
+
+// Import flower images
+import flower1 from '../../../assets/images/flowers/flower-1.jpg';
+import flower2 from '../../../assets/images/flowers/flower-2.jpg';
+import flower3 from '../../../assets/images/flowers/flower-3.jpg';
+import flower4 from '../../../assets/images/flowers/flower-4.jpg';
+import flower5 from '../../../assets/images/flowers/flower-5.jpg';
+import flower6 from '../../../assets/images/flowers/flower-6.jpg';
+import flower7 from '../../../assets/images/flowers/flower-7.jpg';
+import flower8 from '../../../assets/images/flowers/flower-1.jpg';
+
+const data = [
+  {
+    image: flower1.src,
+    alt: '',
+  },
+  {
+    image: flower2.src,
+    alt: '',
+  },
+  {
+    image: flower3.src,
+    alt: '',
+  },
+  {
+    image: flower4.src,
+    alt: '',
+  },
+  {
+    image: flower5.src,
+    alt: '',
+  },
+  {
+    image: flower6.src,
+    alt: '',
+  },
+  {
+    image: flower7.src,
+    alt: '',
+  },
+  {
+    image: flower8.src,
+    alt: '',
+  },
+];
+---
+
+<section aria-labelledby="flower-gallery-heading" id="flower-gallery">
+  <Carousel data={data} />
+</section>

@@ -1,0 +1,15 @@
+---
+type Props = {
+  image: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+};
+
+const { image, alt, width = 200, height = 200, className = '' } = Astro.props;
+---
+
+<div class={`w-fit h-fit overflow-hidden rounded-4xl ${className}`}>
+  <img src={image} alt={alt} width={width} height={height} />
+</div>
