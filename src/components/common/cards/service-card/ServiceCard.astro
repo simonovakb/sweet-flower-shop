@@ -18,9 +18,9 @@ const { number, image, alt, title, description, className = '' } = Astro.props;
 
   <ImageCard image={image} alt={alt} width={145} height={145} className="mb-18" />
 
-  <h3 class="text-5xl font-bold text-headline uppercase mb-4 tracking-tighter">{title}</h3>
+  <h3 class="sm:text-xl md:text-2xl lg:text-5xl font-bold text-headline uppercase mb-4 tracking-tighter">{title}</h3>
 
-  <p class="text-base mb-18 tracking-tight text-gray-600 max-w-md font-family-outfit">
+  <p class="text-base mb-18 tracking-tight text-gray-600 max-w-md font-family-outfit max-w-lg">
     {description}
   </p>
 
