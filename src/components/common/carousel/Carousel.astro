@@ -7,21 +7,31 @@ type DataItem = {
   image: string;
   alt: string;
 };
+
+if (!data || data.length === 0) {
+  console.warn('пупупу, данных нет');
+}
 ---
 
-<div class="swiper-container">
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      {
-        data.map((item: DataItem) => (
-          <div class="swiper-slide">
-            <ImageCard image={item.image} alt={item.alt} width={300} height={300} />
-          </div>
-        ))
-      }
+{data && data.length > 0 ? (
+  <div class="swiper-container">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {
+          data.map((item: DataItem) => (
+            <div class="swiper-slide">
+              <ImageCard image={item.image} alt={item.alt} width={300} height={300} />
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
-</div>
+) : (
+  <div class="text-center py-8 text-gray-500">
+    <p>No items to display</p>
+  </div>
+)}
 
 <style>
   .swiper-container {
@@ -36,33 +46,37 @@ type DataItem = {
   import Swiper from 'swiper';
   import { Autoplay } from 'swiper/modules';
 
-  new Swiper('.swiper', {
-    modules: [Autoplay],
-    slidesPerView: 2,
-    spaceBetween: 10,
-    centeredSlides: true,
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 10,
+  const swiperElement = document.querySelector('.swiper');
+  
+  if (swiperElement) {
+    new Swiper('.swiper', {
+      modules: [Autoplay],
+      slidesPerView: 2,
+      spaceBetween: 10,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
       },
-      720: {
-        slidesPerView: 3,
-        spaceBetween: 15,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        720: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 30,
+        },
       },
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 15,
-      },
-      1200: {
-        slidesPerView: 5,
-        spaceBetween: 30,
-      },
-    },
-  });
+    });
+  }
 </script>
