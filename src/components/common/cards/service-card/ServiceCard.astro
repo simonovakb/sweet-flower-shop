@@ -1,0 +1,28 @@
+---
+import ImageCard from '../image-card/ImageCard.astro';
+
+interface Props {
+  number: string;
+  image: string;
+  alt: string;
+  title: string;
+  description: string;
+  className?: string;
+}
+
+const { number, image, alt, title, description, className = '' } = Astro.props;
+---
+
+<article class={`flex flex-col items-center text-center ${className}`}>
+  <span class="text-5xl font-bold mb-20 text-headline font-family-outfit">{number}</span>
+
+  <ImageCard image={image} alt={alt} width={145} height={145} className="mb-18" />
+
+  <h3 class="text-5xl font-bold text-headline uppercase mb-4 tracking-tighter">{title}</h3>
+
+  <p class="text-base mb-18 tracking-tight text-gray-600 max-w-md font-family-outfit">
+    {description}
+  </p>
+
+  <hr class="h-px bg-divider border-0 w-full" />
+</article>

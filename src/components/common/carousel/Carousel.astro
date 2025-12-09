@@ -1,5 +1,5 @@
 ---
-import Card from '../cards/Card.astro';
+import ImageCard from '../cards/image-card/ImageCard.astro';
 
 const { data } = Astro.props;
 
@@ -15,7 +15,7 @@ type DataItem = {
       {
         data.map((item: DataItem) => (
           <div class="swiper-slide">
-            <Card image={item.image} alt={item.alt} width={300} height={300} />
+            <ImageCard image={item.image} alt={item.alt} width={300} height={300} />
           </div>
         ))
       }
