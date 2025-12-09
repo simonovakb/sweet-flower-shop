@@ -18,24 +18,42 @@ A modern, responsive flower shop website built with Astro and Tailwind CSS.
 ├── public/
 ├── src/
 │   ├── assets/
-│   │   └── images/         # Responsive banner images
+│   │   └── images/         # Optimized images
+│   │       ├── banners/    # Hero banner images
+│   │       └── flowers/    # Product/gallery images
 │   ├── components/
 │   │   ├── header/         # Header with sticky navigation
-│   │   ├── footer/
+│   │   ├── footer/         # Footer with contact info
 │   │   ├── sections/       # Page sections
 │   │   │   ├── banner-section/
 │   │   │   ├── about-section/
 │   │   │   ├── services-section/
+│   │   │   ├── flower-gallery-section/
+│   │   │   ├── photo-section/
+│   │   │   ├── work-with-us-section/
 │   │   │   └── contact-section/
 │   │   └── common/         # Reusable components
-│   │       └── carousel/
+│   │       ├── carousel/   # Swiper carousel
+│   │       ├── cards/      # Card components
+│   │       │   ├── image-card/
+│   │       │   └── service-card/
+│   │       └── sections/
+│   │           └── info-section/
 │   ├── layouts/
-│   │   └── Layout.astro    # Main layout
+│   │   └── Layout.astro    # Main layout with head/footer
 │   ├── pages/
-│   │   └── index.astro     # Home page
+│   │   ├── index.astro     # Home page
+│   │   ├── about.astro     # About page
+│   │   ├── gallery.astro   # Gallery page
+│   │   └── contact.astro   # Contact page
 │   └── styles/
 │       └── global.css      # Global styles and CSS variables
+├── tests/                  # Playwright E2E tests
+│   ├── home.spec.ts
+│   ├── navigation.spec.ts
+│   └── carousel.spec.ts
 ├── astro.config.mjs
+├── playwright.config.ts
 ├── biome.json
 └── package.json
 ```
@@ -44,6 +62,8 @@ A modern, responsive flower shop website built with Astro and Tailwind CSS.
 
 - **Framework**: [Astro](https://astro.build) v5.16.3
 - **Styling**: [Tailwind CSS](https://tailwindcss.com) v4.1.17
+- **Carousel**: [Swiper](https://swiperjs.com) v12.0.3
+- **Testing**: [Playwright](https://playwright.dev) v1.57.0
 - **Linting**: [Biome](https://biomejs.dev)
 - **Formatting**: [Prettier](https://prettier.io) with Astro plugin
 
@@ -51,15 +71,19 @@ A modern, responsive flower shop website built with Astro and Tailwind CSS.
 
 All commands are run from the root of the project:
 
-| Command            | Action                                     |
-| :----------------- | :----------------------------------------- |
-| `npm install`      | Install dependencies                       |
-| `npm run dev`      | Start local dev server at `localhost:4321` |
-| `npm run build`    | Build production site to `./dist/`         |
-| `npm run preview`  | Preview build locally before deploying     |
-| `npm run lint`     | Check code with Biome                      |
-| `npm run lint:fix` | Fix code issues with Biome                 |
-| `npm run format`   | Format code with Prettier                  |
+| Command               | Action                                     |
+| :-------------------- | :----------------------------------------- |
+| `npm install`         | Install dependencies                       |
+| `npm run dev`         | Start local dev server at `localhost:4321` |
+| `npm run build`       | Build production site to `./dist/`         |
+| `npm run preview`     | Preview build locally before deploying     |
+| `npm run lint`        | Check code with Biome                      |
+| `npm run lint:fix`    | Fix code issues with Biome                 |
+| `npm run format`      | Format code with Prettier                  |
+| `npm run test`        | Run Playwright tests                       |
+| `npm run test:ui`     | Run tests in UI mode (interactive)         |
+| `npm run test:headed` | Run tests with visible browser             |
+| `npm run test:report` | Show test report                           |
 
 ## Design System
 
