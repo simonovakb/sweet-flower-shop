@@ -1,28 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/header/Header.astro';
 import Banner from '../components/sections/banner-section/Banner.astro';
 import AboutSection from '../components/sections/about-section/AboutSection.astro';
 import FlowerGallerySection from '../components/sections/flower-gallery-section/FlowerGallerySection.astro';
 import ServicesSection from '../components/sections/services-section/ServicesSection.astro';
 import WorkWithUsSection from '../components/sections/work-with-us-section/WorkWithUsSection.astro';
 import PhotoSection from '../components/sections/photo-section/PhotoSection.astro';
-
-import bannerMobile from '../assets/images/banners/banner-mobile.jpg';
-
-import 'swiper/css';
-import '../styles/global.css';
 ---
 
-<Layout>
-  <!-- Preload critical banner image -->
-  <link slot="head" rel="preload" as="image" href={bannerMobile.src} fetchpriority="high" />
-
-  <Header />
-  <Banner />
-  <AboutSection />
-  <FlowerGallerySection />
-  <ServicesSection />
-  <PhotoSection />
-  <WorkWithUsSection />
+<Layout 
+  title="Our Blooms® - Fresh Flowers & Floral Arrangements"
+  description="Welcome to Our Blooms - your destination for beautiful fresh flowers, custom arrangements, and stunning floral installations. Quality blooms delivered with care."
+>
+  <main>
+    <Banner />
+    <AboutSection />
+    <FlowerGallerySection />
+    <ServicesSection />
+    <PhotoSection />
+    <WorkWithUsSection />
+  </main>
 </Layout>
