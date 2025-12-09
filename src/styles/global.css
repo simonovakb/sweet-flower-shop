@@ -20,6 +20,7 @@
   /* Typography */
   --font-family-base: 'Figtree', system-ui, -apple-system, sans-serif;
   --font-family-heading: 'Caprasimo', system-ui, -apple-system, sans-serif;
+  --font-family-outfit: 'Outfit', system-ui, -apple-system, sans-serif;
 
   /* Font sizes */
   --text-size-xs: 0.75rem; /* 12px */
@@ -91,6 +92,7 @@ body {
   color: var(--color-text-1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: initial;
 }
 
 h1,
